@@ -5,9 +5,12 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *navigator = *list;
+	listint_t *navigator;
 	listint_t *mover, *fore, *aft;
 
+	if (list == NULL)
+		return;
+	navigator = *list;
 	while (true)
 	{
 		navigator = navigator->next;
